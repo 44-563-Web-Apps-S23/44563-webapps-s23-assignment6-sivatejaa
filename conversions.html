@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Conversions</title>
+    <script>
+
+        function convert(){
+            let toShow="";
+            let baseAmount=document.getElementById("baseAmountId").value;
+            let conversionRate=document.getElementById("conversionId").value;
+            for(let i=0;i<5;i++){
+                let convertedValue=baseAmount*conversionRate;//parseFloat(convertedValue.toFixed(2))
+                toShow=toShow+baseAmount+" is "+parseFloat(convertedValue.toFixed(2))+"; ";
+                baseAmount=baseAmount*2;
+            }
+            document.getElementById('resultId').innerHTML="Conversions are:"+toShow;
+        }
+
+        function chooseOp(){
+            let baseAmount=Number(document.getElementById("baseAmountId").value);
+            let conversionRate=Number(document.getElementById("conversionId").value);
+            let average= document.getElementById("average").checked;
+            let max= document.getElementById("max").checked;
+            let min= document.getElementById("min").checked;
+            if(average){
+                let x=baseAmount+conversionRate;
+                document.getElementById('radioResult').innerHTML=(x)/2;         
+            }
+            if(max){
+                  if(baseAmount>conversionRate){
+                    document.getElementById('radioResult').innerHTML="max of "+baseAmount+" and "+conversionRate+" is "+baseAmount;
+                  }else{
+                    document.getElementById('radioResult').innerHTML="max of "+baseAmount+" and "+conversionRate+" is "+conversionRate;
+                  }
+            }
+            if(min){
+                if(baseAmount<conversionRate){
+                    document.getElementById('radioResult').innerHTML="min of "+baseAmount+" and "+conversionRate+" is "+baseAmount;
+                  }else{
+                    document.getElementById('radioResult').innerHTML="min of "+baseAmount+" and "+conversionRate+" is "+conversionRate;
+                  }
+            }
+
+        }
+    </script>
+</head>
+<body>
+
+<h2>Thangala Sivateja Raju shows currency conversions</h2>
+
+<form>
+    <label for="baseAmountId">Enter base amount </label>
+    <input type ="number" id="baseAmountId"  value=50> <br>
+
+    <label for="conversionId">Enter the conversion rate </label>
+    <input type ="number" id="conversionId"  value=35> <br>
+
+    <input type="button" onclick="convert()" value="Show conversions"> <br>
+
+
+
+    <input type="radio" name="radiovalue" id="average" value="mean" onclick="chooseOp()">
+    <label for="average">average</label></br>
+
+    <input type="radio" name="radiovalue" id="max" value="maximum" onclick="chooseOp()">
+    <label for="max">max</label></br>
+
+    <input type="radio" name="radiovalue" id="min" value="minimum"  onclick="chooseOp()">
+    <label for="min">min</label></br>
+
+  <input type="button" class="btn btn-success" onclick="resolveRadio()" value="Get values from radio group"> 
+</form>
+
+<p id="resultId"></p>
+
+<p id="radioResult"></p>
+
+</body>
+</html> 

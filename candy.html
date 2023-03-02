@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ <title>candy</title>
+
+ <h2>Sivateja Raju Thangala chooses candy</h2>
+
+ <script>
+
+    var my_candy_box = {};
+    function selectBox(){
+        let chocolateBox=document.getElementById("chocolate").checked
+        let nutsBox=document.getElementById("nuts").checked
+        let chewyBox=document.getElementById("chewy").checked
+    
+        if(chocolateBox)
+        {
+            my_candy_box.chocolate=true;
+        }
+        else
+        {
+            my_candy_box.chocolate=false;
+        }
+        if(nutsBox)
+        {
+            my_candy_box.nuts=true;
+        }
+        else
+        {
+            my_candy_box.nuts=false;
+        }
+        if(chewyBox)
+        {
+            my_candy_box.chewy=true;
+        }
+        else
+        {
+            my_candy_box.chewy=false;
+        }
+        document.getElementById("result").innerHTML="chocoloate : "+my_candy_box.chocolate+" nuts : "+my_candy_box.nuts+" chewy : "+my_candy_box.chewy;
+        chocolateBox=document.getElementById("chocolate").checked = false;
+        nutsBox=document.getElementById("nuts").checked = false;
+        chewyBox=document.getElementById("chewy").checked = false;
+
+    }
+
+    function updateBox(){
+        my_candy_box["size"]=document.getElementById("size").value;
+        my_candy_box["price"]=document.getElementById("price").value;
+        document.getElementById('result2').innerHTML=my_candy_box.size+"  "+my_candy_box.price;
+    }
+
+</script>
+</head>
+<body>
+
+
+
+<form>
+     <input type="checkbox" id="chocolate" value="true">
+     <label for="chocolate"> Dark Chocolate</label><br>
+
+     <input type="checkbox" id="nuts"  value="true">
+     <label for="nuts"> Nuts</label><br>
+
+     <input type="checkbox" id="chewy"  value="false">
+     <label for="chewy"> Chewy</label><br><br>
+
+     <input type="button" onclick="selectBox()" value="Select a box "> 
+</form>
+
+
+<p id="result"> </p>
+
+<form>
+    <input type="text" id="size" value="size">
+    <label for="size"> Enter the size</label><br>
+
+    <input type="text" id="price">
+    <label for="price"> Enter price</label><br>
+
+    <input type="button" onclick="updateBox()" value="Update the box ">
+</form>
+
+<p id="result2"></p>
+</body>
+</html> 
