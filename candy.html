@@ -60,13 +60,13 @@
 
 <div class="container">
 <form>
-     <input type="checkbox" id="chocolate" value="true">
+     <input type="checkbox" class="form-check-input" id="chocolate" value="true">
      <label for="chocolate"> Dark Chocolate</label><br>
 
-     <input type="checkbox" id="nuts"  value="true">
+     <input type="checkbox" class="form-check-input" id="nuts"  value="true">
      <label for="nuts"> Nuts</label><br>
 
-     <input type="checkbox" id="chewy"  value="false">
+     <input type="checkbox" class="form-check-input" id="chewy"  value="false">
      <label for="chewy"> Chewy</label><br><br>
 
      <input type="button" class="btn btn-warning" onclick="selectBox()" value="Select a box "> 
@@ -76,10 +76,10 @@
 <p id="result"> </p>
 
 <form>
-    <input type="text" id="size" value="size">
+    <input class="form-control" type="text" id="size" value="size" style="width:150px;height:30px">
     <label for="size"> Enter the size</label><br>
 
-    <input type="text" id="price">
+    <input class="form-control" type="text" id="price" style="width:150px;height:30px">
     <label for="price"> Enter price</label><br>
 
     <input type="button" class="btn btn-success" onclick="updateBox()" value="Update the box ">

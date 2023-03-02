@@ -56,28 +56,28 @@
 <form>
   <div class="form-group">
     <label for="baseAmountId">Enter base amount </label>
-    <input type ="number" id="baseAmountId"  value=50> <br>
+    <input type ="number" class="form-control" id="baseAmountId"  value=50 style="width:150px;height:30px"> <br>
   </div>
 
   <div class="form-group">
     <label for="conversionId">Enter the conversion rate </label>
-    <input type ="number" id="conversionId"  value=35> <br>
+    <input type ="number" class="form-control" id="conversionId"  value=35 style="width:150px;height:30px"> <br>
   </div>
     <input type="button" class="btn btn-success" onclick="convert()" value="Show conversions"> <br>
 
 
     <div class="form-group">
-      <input type="radio" name="radiovalue" id="average" value="mean" onclick="chooseOp()">
+      <input type="radio" class="form-check-input" name="radiovalue" id="average" value="mean" onclick="chooseOp()">
       <label for="average">average</label></br>
     </div>
 
     <div class="form-group">
-      <input type="radio" name="radiovalue" id="max" value="maximum" onclick="chooseOp()">
+      <input type="radio" class="form-check-input" name="radiovalue" id="max" value="maximum" onclick="chooseOp()">
       <label for="max">max</label></br>
   </div>
 
   <div class="form-group">
-    <input type="radio" name="radiovalue" id="min" value="minimum"  onclick="chooseOp()">
+    <input type="radio" class="form-check-input" name="radiovalue" id="min" value="minimum"  onclick="chooseOp()">
     <label for="min">min</label></br>
   </div>
 
