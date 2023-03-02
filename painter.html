@@ -53,19 +53,19 @@
     </script>
  </head>
 <body>
-    <div class="container">
+<div class="container">
 <h3>Painter entry Sivateja Raju Thangala</h3>
 
-<form class="form-inline">
-    <div class="form-group">
-        <label for="passwordId">The hidden painter name </label>
-        <input type ="password" id="passwordId" value="Monet"> <br> <br>
-    </div>
+<form>
+  
+    <label for="passwordId">The hidden painter name </label>
+    <input class="form-control" type ="password" id="passwordId" value="Monet"> <br> <br>
+  
     <label for="guessPainterId">Guess the painter </label>
-    <input type ="text" id="guessPainterId" autofocus > <br>
+    <input class="form-control" type ="text" id="guessPainterId" autofocus > <br>
 
     
-    <input type="button"  id="guessButton" onclick="checkPainter()" value="Check the guess">
+    <input type="button" class="btn btn-danger" id="guessButton" onclick="checkPainter()" value="Check the guess">
 </form>
 
 </div>
